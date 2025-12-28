@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mahdi – Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+  background: #f3f4f6;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+/* ================= YELLOW BARS ================= */
+.yellow-bar {
+  position: fixed;
+  top: 0;
+  width: 20px;
+  height: 100vh;
+  background: #fbbf24;
+  z-index: -1;
+}
+.yellow-bar.left { left: 0; }
+.yellow-bar.right { right: 0; }
+
+/* ================= HERO IMAGE ================= */
+.hero-img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border: 8px solid #fff;
+  background: #fff;
+}
+
+
+.icon-arc {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  right: 18%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+}
+
+.icon-arc li {
+  position: absolute;
+}
+
+.icon-arc a {
+  width: 44px;
+  height: 44px;
+  background: #000;
+  color: #fbbf24;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.icon-arc a:hover {
+  background: #fbbf24;
+  color: #000;
+  transform: scale(1.1);
+}
+
+
+.icon-arc li:nth-child(1){transform:rotate(-60deg) translate(160px) rotate(60deg);}
+.icon-arc li:nth-child(2){transform:rotate(-30deg) translate(160px) rotate(30deg);}
+.icon-arc li:nth-child(3){transform:rotate(0deg) translate(160px) rotate(0deg);}
+.icon-arc li:nth-child(4){transform:rotate(30deg) translate(160px) rotate(-30deg);}
+.icon-arc li:nth-child(5){transform:rotate(60deg) translate(160px) rotate(-60deg);}
+.icon-arc li:nth-child(6){transform:rotate(90deg) translate(160px) rotate(-90deg);}
+
+
+@media (max-width: 768px) {
+
+  .hero-img {
+    width: 240px;
+    height: 240px;
+    margin-top: 30px;
+  }
+
+  /* Convert arc → horizontal row */
+  .icon-arc {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .icon-arc li {
+    position: static;
+    transform: none !important;
+  }
+
+  .yellow-bar {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="yellow-bar left"></div>
+<div class="yellow-bar right"></div>
+
+<div class="container-fluid">
+  <div class="row min-vh-100 align-items-center">
+
+    
+    <div class="col-md-6 px-5">
+      <h6 class="text-warning fw-bold">HI THERE!</h6>
+      <h1 class="fw-bold display-4">
+        I'M <span class="text-warning">MAHDI</span>
+      </h1>
+
+      <span class="badge bg-dark mb-3">Web Designer / Developer</span>
+
+      <p class="text-muted mt-4">
+        Versatile creative professional delivering modern designs,
+        brand identity, and expressive dev.
+      </p>
+
+      <a href="about.html" class="btn btn-warning px-4 mt-3">
+        More About Me
+      </a>
+    </div>
+
+    
+    <div class="col-md-6 position-relative text-center">
+      <img src="images/profile.jpg" class="hero-img rounded-circle">
+
+      <ul class="icon-arc">
+        <li><a href="index.html"><i class="bi bi-house"></i></a></li>
+        <li><a href="about.html"><i class="bi bi-person"></i></a></li>
+        <li><a href="resume.html"><i class="bi bi-file-earmark-text"></i></a></li>
+        <li><a href="portfolio.html"><i class="bi bi-grid"></i></a></li>
+        <li><a href="testimonials.html"><i class="bi bi-chat-quote"></i></a></li>
+        <li><a href="contact.html"><i class="bi bi-envelope"></i></a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
